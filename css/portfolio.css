@@ -1,0 +1,281 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	display: flex;
+	flex-direction: column;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h3 {
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 33px;
+}
+
+.parallax {
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== MAIN SECTION ========== ========== ========== =========== 
+=========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+#main-content {
+	background-image: url(../img/main.jpg);
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+}
+
+#main-hello {
+	align-self: center;
+	justify-content: center;
+	font-size: 5em;
+	flex-grow: 1;
+	text-align: center;
+	color: #222;
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== ABOUT SECTION ========== ========== ========== =========== 
+=========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+.about-text {
+	padding: 30px;
+	text-align: center;
+	font-size: 1.7em;
+	color: #1C2833;
+	font-weight: 200;
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== SKILLS SECTION ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+#skills {
+	background-image: url(../img/skills.jpg);
+	background-size: cover;
+	height: auto;
+}
+
+#skills-list-container {
+	background-color: rgba(0, 0, 0, 0.75);
+	height: 100%;
+	font-size: 1.7em;
+	padding-bottom: 30px;
+}
+
+#skills-list-container h3 {
+	font-size: 2em;
+}
+
+#skills-list {
+	list-style: none;
+	color: white;
+	margin: 0 auto;
+	font-size: 1.3em;
+	font-weight: 200;
+}
+
+#skills-list li {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#skills-list li span {
+	font-size: 3.4em;
+	font-weight: 600;
+}
+
+.loading-bar {
+	height: 11px;
+	width: 50%;
+	position: relative;
+	margin: 30px auto;
+	padding: 3px;
+	background-color: white;
+}
+
+.inside-bar {
+	position: absolute;
+	height: 5px;	
+	background-color: #ff5d4c;
+}
+
+.html-bar {
+	width: 75%
+}
+
+.css-bar {
+	width: 75%
+}
+
+.bs-bar {
+	width: 60%
+}
+
+.js-bar {
+	width: 60%
+}
+
+.jquery-bar {
+	width: 40%
+}
+
+.git-bar {
+	width: 33%
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== PORTFOLIO SECTION ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+#portfolio {
+	height: auto;
+}
+
+#portfolio h3 {
+	color: #111;
+	font-size: 2.1em;
+}
+
+#portfolio-container{	/*	div   */
+	display: flex;
+}
+
+#projects-list {	/*	ul 	*/
+	list-style: none;
+	margin-top: 20px;
+	padding: 0;
+	flex-direction: column;
+}
+
+#projects-list li {
+	margin-bottom: 20px;
+}
+
+#projects-list li img {
+	width: 100%;
+}
+
+#projects-list a.darken {					/* Darkening the images when hovered */				
+    display: flex;
+    background: black;
+    padding: 0;
+    position: relative;
+    justify-content: center;
+}
+
+#projects-list a.darken img {
+    display: block;
+
+    -webkit-transition: all 0.4s linear;
+       -moz-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+}
+
+#projects-list a.darken:hover img {
+    opacity: 0.3;
+}
+
+#projects-list a.darken span {
+    position: absolute;
+    font-size: 1.7em;
+    color: rgba(255, 255, 255, 0);
+    align-self: center;
+    padding: 10px;
+}
+
+#projects-list a.darken:hover span {
+    color: rgba(255, 255, 255, 1); 
+
+
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== CONTACT SECTION ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+#contact {
+	background-image: url("../img/contact.jpg");
+}
+
+#contact h3 {
+	font-size: 2em;
+}
+
+form {
+	margin: 25px;
+}
+
+.btn-primary {
+	margin: 15px auto;
+	background-color: #ff5d4c;
+	border-color: #8c372b;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2em;
+	width: 10em;
+}
+
+#contact label {
+	color: white;
+	font-size: 1.2em;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 200;
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== FOOTER SECTION ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+footer {
+	height: auto;
+	background-color: #F1F0F0;
+}
+
+footer p {
+	margin: 10px auto;
+}
+
+#social-list {				/* ul  */
+	list-style: none;
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	margin-left: -15px;
+}
+
+#social-list li {
+	flex-direction: row;
+	margin-left: 30px;
+}
+
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== NEW CLASSES ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+ .blackhover {
+ 	background-color: rgba(0, 0, 0, 0.5);
+ }
