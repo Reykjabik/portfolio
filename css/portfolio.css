@@ -23,7 +23,7 @@ h3 {
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 20px;
-	padding-left: 33px;
+	
 }
 
 .parallax {
@@ -38,11 +38,14 @@ h3 {
 ========== ========== ========== ========== MAIN SECTION ========== ========== ========== =========== 
 =========== ========== ========== ========== ========== ========== ========== ========== ========== */
 
+
+
 #main-content {
 	background-image: url(../img/main.jpg);
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
+	position: relative;
 }
 
 #main-hello {
@@ -52,11 +55,88 @@ h3 {
 	flex-grow: 1;
 	text-align: center;
 	color: #222;
+	display: block;
+}
+
+#emptydiv {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 60%;
+}
+
+.toggle {
+  width: 40px;
+  height: 33px;
+  margin: 10px auto;
+  right: 20px;
+  position: absolute;
+}
+
+.toggle div {
+  width: 100%;
+  height: 5px;
+  background: white;
+  margin: 6px auto;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+#menu {
+  color: black;
+  list-style: none;
+  display: none;
+  width: 370px;
+  height: auto;
+  padding: 7px;
+  text-align: center;
+  margin-left: -50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  justify-content: space-between;
+
+}
+
+#menu li {
+	display: inline-block;
+	padding: 4px 14px;
+	font-size: 1.3em;
+	font-weight: lighter;
+}
+
+#menu a {
+	text-decoration: none;
+	color: white;
+}
+
+.toggle.on .one {
+  transform: rotate(45deg) translate(9px, 8px);
+}
+
+.toggle.on .two {
+  opacity: 0;
+}
+
+.toggle.on .three {
+  transform: rotate(-45deg) translate(8px, -6px);
+}
+
+#arrow {
+	position: absolute;
+	font-size: 0.5em;
+	top: 80%;
+	left: 48%;
 }
 
 /* ========== ========== ========== ========== ========== ========== ========== ========== ===========
 ========== ========== ========== ========== ABOUT SECTION ========== ========== ========== =========== 
 =========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+.section-header {
+	color: #111;
+	font-size: 2em;
+	font-weight: bolder;
+}
 
 .about-text {
 	padding: 30px;
@@ -83,8 +163,8 @@ h3 {
 	padding-bottom: 30px;
 }
 
-#skills-list-container h3 {
-	font-size: 2em;
+#skills-list-container>h3 {
+	color: white;
 }
 
 #skills-list {
@@ -93,6 +173,7 @@ h3 {
 	margin: 0 auto;
 	font-size: 1.3em;
 	font-weight: 200;
+	padding-left: 0;
 }
 
 #skills-list li {
@@ -146,6 +227,46 @@ h3 {
 }
 
 /* ========== ========== ========== ========== ========== ========== ========== ========== ===========
+========== ========== ========== ========== PHILOSOPHY SECTION ========== ========== ========== ========== 
+ ========== ========== ========== ========== ========== ========== ========== ========== ========== */
+
+.philosophy {
+	height: auto;
+	margin: 0;
+	padding: 10px 20px 20px;
+	text-align: center;
+	font-weight: 200;
+}
+
+#philo-header>h3 {
+	padding-bottom: 15px;
+}
+
+.philosophy p {
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 20px;
+}
+
+.philosophy i {
+	font-size: 8em;
+	margin-top: 20px;
+}
+
+.odd {
+	background-color: #111;
+	color: #eee !important;
+}
+
+.even {
+	background-color: #eee;
+	color: #011 !important;
+}
+
+.black {
+	color: #040f14;
+}
+/* ========== ========== ========== ========== ========== ========== ========== ========== ===========
 ========== ========== ========== ========== PORTFOLIO SECTION ========== ========== ========== ========== 
  ========== ========== ========== ========== ========== ========== ========== ========== ========== */
 
@@ -153,13 +274,13 @@ h3 {
 	height: auto;
 }
 
-#portfolio h3 {
-	color: #111;
-	font-size: 2.1em;
+#portfolio>h3 {
+	color: white;
 }
 
 #portfolio-container{	/*	div   */
 	display: flex;
+	justify-content: center;
 }
 
 #projects-list {	/*	ul 	*/
@@ -219,10 +340,12 @@ h3 {
 
 #contact {
 	background-image: url("../img/contact.jpg");
+	height: auto;
 }
 
-#contact h3 {
-	font-size: 2em;
+#contact>h3 {
+	color: white;
+	font-size: 2.3em;
 }
 
 form {
@@ -253,10 +376,19 @@ form {
 footer {
 	height: auto;
 	background-color: #F1F0F0;
+	padding-bottom: 16px;
+	border-top: 2px solid #FF5D4C;
+	margin-top: -25px;
+
 }
 
 footer p {
 	margin: 10px auto;
+	font-size: 1.3em;
+}
+
+.strong {
+	font-weight: bold;
 }
 
 #social-list {				/* ul  */
@@ -279,3 +411,133 @@ footer p {
  .blackhover {
  	background-color: rgba(0, 0, 0, 0.5);
  }
+
+ /*****************************************************************************************************
+  **************************************** MEDIA QUERIES **********************************************
+ /*****************************************************************************************************/
+
+ @media (min-width: 500px) {
+ 	#portfolio-container {
+ 		text-align: center;
+ 	}
+
+ 	#projects-list {
+ 		display: flex;
+ 		justify-content: center;
+ 	}
+
+ 	#projects-list li {
+ 		align-self: center;
+ 		left: 5%;
+ 	}
+ }
+
+ @media (min-width: 680px) {
+ 	
+ 	.toggle {
+ 		display: none;
+ 	}
+
+ 	#main-content{
+ 		position: relative;
+ 	}
+
+ 	#main-hello {
+ 		display: block;
+ 		width: 100%;
+ 	}
+
+ 	#menu {
+ 		display: flex;
+ 		align-content: center;
+ 		width: 100%;
+ 		height: 60px;
+ 		position: absolute;
+ 		left: 50%;
+ 		border-radius: 0;
+ 		justify-content: space-around;
+ 	}
+
+ 	#menu li {
+ 		align-self: center;
+ 		font-size: 1.9em;
+ 	}
+
+ 	#skills-list {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		justify-content: center;
+ 	}
+
+ 	#skills-list li {
+ 		flex-basis: 300px;
+ 		align-self: center;
+ 	}
+ }
+
+ @media (min-width: 760px) {
+ 	
+	.philosophy-container {
+		display: flex;
+	}
+
+	.philosophy {
+		flex: row;
+		background-color: white;
+		color: #111;
+	}
+
+	.philosophy h3 {
+		font-size: 2.5em;
+		color: #111;
+	}
+
+	.philosophy p, .philosophy i {
+		background-color: white;
+		color: #111;
+	}
+
+	#philo-header h3 {
+		font-size: 2.5em;
+	}
+
+	#portfolio h3 {
+		background-color: #ff5d4c;
+		font-size: 2.5em;
+		padding-bottom: 20px;
+	}
+
+	form {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+ }
+
+ @media (min-width: 1024px) {
+ 		
+ 	.philosophy {
+		flex-grow: 1;
+		flex-basis: 500px;
+	}
+
+ 	#about {
+ 		padding-left: 120px;
+ 		padding-right: 120px;
+ 	}
+
+ 	#projects-list {
+ 		display: flex;
+ 		width: 100%;
+ 		flex-wrap: wrap;
+ 		align-items: stretch;
+ 		flex-direction: row;
+ 		justify-content: space-around;
+ 	}
+
+ 	form {
+		padding-left: 33%;
+		padding-right: 33%;
+		padding-bottom: 15px;
+	}
+}

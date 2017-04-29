@@ -23,16 +23,35 @@
 		<div id="main-wrapper">
 
 			<!-- *********************************** MAIN SECTION *********************************** -->
-
+			
 			<div id="main-content" class="parallax">
-				
+
+				<div class="toggle">
+					  <div class="one"></div>
+					  <div class="two"></div>
+					  <div class="three"></div>
+				</div>
+
 				<h1 id="main-hello">Hi! I'm Javier</h1>
+
+				<div id="emptydiv"></div>
+				<ul id="menu">
+				  <li><a href="#skills">Skills</a></li>
+				  <li><a href="#philo-header">Philosophy</a></li>
+				  <li><a href="#portfolio">Portfolio</a></li>
+				  <li><a href="#contact">Contact</a></li>
+				</ul>
+
+				<div id="arrow">
+					<a href="#about"><img src="img/blackarrow.png" width="50" /></a>
+				</div>
 
 			</div>
 
 			<!-- *********************************** ABOUT SECTION *********************************** -->
 
 			<div id="about">
+				<h3 class="section-header">About</h3>
 				<h4 class="about-text">Although you can call me Javi. I am a Moscow-based allround <strong>front end developer</strong> and <strong>digital nomad</strong>, and I found in this job a passion. That's right, the more I know, the deeper I want to get, so you'll find in me an ever hungry developer.</h4>
 
 				<h4 class="about-text">
@@ -45,7 +64,7 @@
 			<div id="skills" class="parallax">
 
 				<div id="skills-list-container">
-					<h3>My skills</h3>
+					<h3 class="section-header">Skills</h3>
 					<ul id="skills-list">
 						<li>
 							<i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
@@ -91,10 +110,35 @@
 				</div>
 			</div>
 
+			<!-- *********************************** PHILOSOPHY SECTION *********************************** -->
+
+			<div id="philo-header">
+				<h3 class="section-header">Philosophy</h3>
+			</div>
+
+			<div class="philosophy-container">
+			
+				<div class="philosophy odd">
+					<i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+					<h3>Responsiveness</h3>
+					<p>I know, your website is increasingly being read by phone users. It's happening everywhere. That's why I use the Mobile First approach to make sure that all types of devices are covered.</p>
+				</div>
+				<div class="philosophy even">
+					<i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+					<h3><span class="black">Connection</span></h3>
+					<p>I like to perfect the details of my clients to make sure the design and functionalies are the desired ones.</p> 
+				</div>
+				<div class="philosophy odd">
+					<i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
+					<h3>Creativity</h3>
+					<p>I am constantly updating and reviewing the latest web development and design ideas and patterns.</p>
+				</div>
+			</div>
+
 			<!-- *********************************** PORTFOLIO SECTION *********************************** -->
 
 			<div id="portfolio">
-				<h3>Portfolio</h3>
+				<h3 class="section-header shadow-bottom">Portfolio</h3>
 				<div id="portfolio-container">
 					<ul id="projects-list">
 						<li>
@@ -128,7 +172,7 @@
 			<!-- *********************************** CONTACT SECTION *********************************** -->
 
 			<div id="contact" class="parallax">
-				<h3>Contact</h3>
+				<h3 class="section-header">Contact</h3>
 				<form>
 					<div class="form-group">
 						<label for="name">Your name: </label>
@@ -148,19 +192,17 @@
 					</div>
 					<div class="text-center">
 						<button type="submit" class="btn btn-primary text-center">Submit</button>
-						</div>
+					</div>
 				</form>
-
-			</div>
-
-			<!-- *********************************** FOOTER SECTION *********************************** -->
-
-			
+			</div>			
 		</div>
+
+		<!-- *********************************** FOOTER SECTION *********************************** -->
+
 		<footer id="footer" class="text-center">
-			<p>e-mail: jabicobain@gmail.com</p>
-			<p>phone: +7 977 297 41 16</p>
-			<p>skype: alcest_86</p>
+			<p><span class="strong">e-mail:</span> jabicobain@gmail.com</p>
+			<p><span class="strong">phone:</span> +7 977 297 41 16</p>
+			<p><span class="strong">skype:</span> alcest_86</p>
 			<ul id="social-list">
 				<li><a href="https://www.linkedin.com/in/javier-esp%C3%ADn-92191581/"><img src="img/linkedin.png" height="40"/></a></li>
 				<li><a href="https://github.com/Reykjabik"><img src="img/github.png" height="40"/></a></li>
@@ -175,5 +217,4 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
-
 </html>
